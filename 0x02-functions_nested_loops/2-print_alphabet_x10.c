@@ -4,17 +4,17 @@
  * Return: 0 (success)
  */
 void print_alphabet_x10(void)
-{
-char letter;
-for (letter = 'a'; letter <= 'z'; letter++)
-_putchar(letter);
-_putchar('\n');
+{	int i;
+	int j;
 
-int main(void)
-{
-	int i;
 	for (i = 0; i < 10; i++);
-	print_alphabet();
+{
+	for (j = 97; j <= 132; j++);
+	{ 
+		_putchar(j);
+	}
+	_putchar('\n');
 }
+
 return 0;
 }
