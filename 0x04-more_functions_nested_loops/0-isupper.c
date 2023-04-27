@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *  _isupper -  define if a character is uppercase
+ * _isupper - define if a character is uppercase
  *
  * Description: Prints the alphabet with _putchar
  * @c: charater
