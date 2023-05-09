@@ -1,13 +1,24 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
-int main() {
-    char str[] = "Hello, world!";
-    char *result = _strchr(str, 'w');
-    if (result != NULL) {
-        printf("Found character '%c' at position %ld.\n", *result, result - str);
-    } else {
-        printf("Character not found.\n");
-    }
-    return 0;
+/**
+ * _strchr - function that locates a character in a string.
+ *
+ * @s: string to receive and return
+ * @c: character to receive
+ * Return: char
+ */
+
+char *_strchr(char *s, char c)
+{
+	while (*s != '\0')
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
+	if (*s == c)
+		return (s);
+	else
+		return (NULL);
 }
