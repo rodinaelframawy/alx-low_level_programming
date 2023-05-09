@@ -8,15 +8,25 @@
  * Return: nothing
  */
 
-void print_diagsums(int *a, int size) {
-    int i, j, sum1 = 0, sum2 = 0;
-    for (i = 0; i < size; i++) {
-        // add the elements of the first diagonal (top-left to bottom-right)
-        sum1 += *(a + i*size + i);
+void print_diagsums(int *a, int size)
+{
+	int i = 0;
+	int value = 0;
+	int sum, sum2;
 
-        // add the elements of the second diagonal (top-right to bottom-left)
-        sum2 += *(a + i*size + size - 1 - i);
-    }
-    printf("Sum of diagonal 1: %d\n", sum1);
-    printf("Sum of diagonal 2: %d\n", sum2);
+	sum = sum2 = 0;
+	while (i < (size * size))
+	{
+		value = *(a + i);
+		sum = sum + value;
+		i = i + size + 1;
+	}
+	i = size - 1;
+	while (i < ((size * size) - 1))
+	{
+		value = *(a + i);
+		sum2 = sum2 + value;
+		i = i + (size - 1);
+	}
+	printf("%d, %d\n", sum, sum2);
 }
